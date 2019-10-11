@@ -2,22 +2,26 @@ extends ../layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  //- p Welcome to #{title}
   // Add new program program form
   form(method='POST' action='program/submitNewProgram')
     br
     div.form-group
       br
-      label(for='program') Type Program Name: 
-      input#program.form-control(type='text', placeholder=' Enter program name' name='program')
-      a.btn.btn-primary.btn-lg(type='submit') Add New Program
+      br
+      label(for='program') Type Workout Name: 
+      input#program.form-control.p-2(type='text', placeholder=' Enter workout name' name='program')
+      br
+      a.p-2.btn.btn-success.float-left.btn-sm(type='submit') Add New Workout
+      br
+      br
 
 
   ul.list-group
     each program in programs
       li.list-group-item
-        a(href="/program/" + program._id)= program.Program 
-        div.table-wrapper
+        a(href="/program/" + program._id)= program.Program
+        div.table-wrapper.p-2.table-stripped
           table.desc
             tr
               th Exercise
@@ -45,6 +49,12 @@ block content
             each item in program.Reps
                 tr
                   td(height='50px')=item
+        
+
+      //- block footer
+      //- form(method='POST' action='login/logout')
+      //-   div.form-group
+      //-   button.btn.btn-primary(type='submit') Logout
 
 
 

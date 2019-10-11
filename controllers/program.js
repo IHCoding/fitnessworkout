@@ -4,7 +4,7 @@ module.exports.index = async function(req, res) {
   const programsget = await programsArray(req);
 
   res.render("program/index", {
-    title: "Workouts Page",
+    title: " Workouts Page ",
     programs: programsget
   });
 };
@@ -29,7 +29,7 @@ getprogram = async function(id) {
 module.exports.getWorkout = async function(req, res) {
   const docget = await getprogram(req.params.id);
   res.render("program/add_exercise", {
-    title: "add exercise page",
+    title: " Add Exercise Details ",
     id: req.params.id,
     doc: docget
   });

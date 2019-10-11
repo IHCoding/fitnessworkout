@@ -1,12 +1,16 @@
 extends ../layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  h3.p-3 Welcome to #{title}
 
   form(method='POST' action='/program/submitAddExercise')
+    br
+    br
+    br
     div.form-group
-      label(for='_id') id:
+      br
+      label(for='_id')  id :
       input#_id.form.control(type='text', name='id' value=id, required)
     div.form-group
       label(for='exercise') Exercise:
@@ -20,4 +24,5 @@ block content
     div.form-group
       label(for='repsOrTime') Reps/time:
       input#repsOrTime.form-control(type='text' name='repsOrTime', required)
-    button.btn.btn-primary(type='submit') Add New Exercise
+      br
+      button.btn.btn-success.float-right.btn-sm(type='submit') Add Exercise

@@ -6,16 +6,59 @@ html
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/bootstrap.css')
   body
-    block navbar
-      a(class='navspace' href='/') Home
-      a(class='navspace' href='signup') Signup
-      a(class='navspace' href='login') Login
+    //- h2.my-0.mr-md-auto.font-weight-normal FitnessWorkout
+    //- nav.my-2.my-md-0.mr-md-3
+    //-     a.p-2(href='/') Home
+    //-     a.p-2(href='program') Workouts
+    //-     a.p-10.btn.btn-outline(href='login') Login
+    //-     a.p-10.btn.btn-outline(href='signup') Sign up
+nav.navbar.navbar-expand-md.navbar-dark.bg-dark.navbar-default
+  .container
+    .navbar-header
+      a.p-10.navbar-brand(href='/') FitnessWorkout
+      a.p-2(href='program') Workouts
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', 
+      aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarsExampleDefault.collapse.navbar-collapse.navbar-right
+      ul.navbar-nav.ml-auto      
+        li.nav-item
+          a.nav-link(href='signup') Register
+        li.nav-item
+          a.nav-link(href='login') Login
+.container
+  .row
+    .col-md-3
+      //- ul.list-group
+      //-   li.list-group-item
+      //-     a(href='program') Workouts
+      br
+      br
+    .col-md-9
 
-      a(class='navspace' href='program') Workout Programs
+    
+    //- a(href="/program/" + program._id)= program.Program
+    
+    //- block navbar
+    //-   a(class='navspace' href='/') Home
+    //-   a(class='navspace' href='program') Workouts
+    //-     //- a(class='navbar-item' href='signup') Signup
+    //-     //- a(class='navbar-item' href='login') Login
+
+    //-   ul.navbar-nav.mr-auto
+    //-     li.nav-item
+    //-     a.nav-link(href=href='signup') Register
+    //-     li.nav-item
+    //-     a.nav-link(href=href='login') Login
+
       
     block content
 
-    block footer
-      form(method='POST' action='login/logout')
-        div.form-group
-        button.btn.btn-primary(type='submit') Logout
+    
+      p.text-bottom FitnessWorkout © 2019, All Rights Reserved
+
+
+       //- block footer
+      //- form(method='POST' action='login/logout')
+      //-   div.form-group
+      //-   button.btn.btn-primary(type='submit') Logout
