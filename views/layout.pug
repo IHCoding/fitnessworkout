@@ -1,0 +1,21 @@
+doctype html
+html
+
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+  body
+    block navbar
+      a(class='navspace' href='/') Home
+      a(class='navspace' href='signup') Signup
+      a(class='navspace' href='login') Login
+
+      a(class='navspace' href='program') Workout Programs
+      
+    block content
+
+    block footer
+      form(method='POST' action='login/logout')
+        div.form-group
+        button.btn.btn-primary(type='submit') Logout

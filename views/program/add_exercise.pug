@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(method='POST' action='/program/submitAddExercise')
+    div.form-group
+      label(for='_id') id:
+      input#_id.form.control(type='text', name='id' value=id, required)
+    div.form-group
+      label(for='exercise') Exercise:
+      input#exercise.form-control(type='text', placeholder='Exercise' name='exercise', required)
+    div.form-group
+      label(for='description') Description:
+      input#description.form-control(type='text', placeholder='Description' name='description', required)
+    div.form-group
+      label(for='set') Set:
+      input#set.form-control(type='number', placeholder='Set' name='set', required)
+    div.form-group
+      label(for='repsOrTime') Reps/time:
+      input#repsOrTime.form-control(type='text' name='repsOrTime', required)
+    button.btn.btn-primary(type='submit') Add New Exercise

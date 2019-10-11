@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h1= 'Login'
+  p Please login to create a workout!
+
+  // register form
+  form(method='POST' action='login/')
+    div.form-group
+      label(for='email') Email:
+      input#email.form-control(type='email', placeholder='info@mail.com' name='email')
+    
+    div.form-group
+      label(for='pw') Password:
+      input#pw.form-control(type='password' name='password')
+    
+    button.btn.btn-primary(type='submit') Login
