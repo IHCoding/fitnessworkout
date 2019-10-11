@@ -32,6 +32,7 @@ mongoose.set('useCreateIndex', true);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// web: npm start
 
 app.use(logger('dev'));
 app.use(express.json());
