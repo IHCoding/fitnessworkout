@@ -47,8 +47,9 @@ module.exports.addExercise = async function(req, res) {
 
     docget.save(function(err) {
       if (err) return handleError(err);
+      res.redirect("/program")
     });
-    res.redirect("/program")
+    
   } else {
     res.redirect("/");
   }
