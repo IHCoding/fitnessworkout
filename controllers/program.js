@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 module.exports.index = async function(req, res) {
   const programsget = await programsArray(req);
-
+  console.log(programsget)
   res.render("program/index", {
     title: " Workouts Page ",
     programs: programsget
@@ -56,6 +56,7 @@ module.exports.addExercise = async function(req, res) {
 };
 
 module.exports.submitNewProgram = function(req, res) {
+  console.log('test')
   if (req._passport.session) {
     const program = mongoose.model("program");
     const myProgram = new program();
